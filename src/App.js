@@ -1,18 +1,30 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { LocalDate, ChronoUnit } from "js-joda";
 
-class App extends Component {
+class App extends React.Component {
   render() {
+    const today = LocalDate.now();
+    const nextYear = today.year() + 1;
+    const firstDayNextYear = LocalDate.of(nextYear, 1, 1);
+
+    const daysUntilNextYear = today.until(firstDayNextYear, ChronoUnit.DAYS);
+
+    const isNYE = Boolean(daysUntilNextYear <= 1);
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title"> When will it be {nextYear}?</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+
+        {!isNYE ? (
+          <p>
+            It will be {nextYear} in {daysUntilNextYear} days!
+          </p>
+        ) : (
+          <p>It's New Years Eve and {nextYear} starts tomorrow!</p>
+        )}
       </div>
     );
   }
