@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 
-import { isNYE, nextYear, daysUntilNextYear } from "util/dateHelpers";
+import { isNYE, nextYear, daysUntilNextYear } from "./util/dateHelpers";
 
 class App extends React.Component {
   render() {
