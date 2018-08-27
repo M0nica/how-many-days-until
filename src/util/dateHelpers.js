@@ -1,9 +1,9 @@
 // @flow
 
-import { LocalDate, ChronoUnit, Year } from "js-joda";
+import { LocalDate, ChronoUnit } from "js-joda";
 
-export function getToday(date: ?LocalDate): LocalDate {
-  return date != null ? date : LocalDate.now();
+export function getToday(): LocalDate {
+  return LocalDate.now();
 }
 
 export function getNextYear(date: LocalDate): number {
