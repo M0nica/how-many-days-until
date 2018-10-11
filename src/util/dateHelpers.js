@@ -22,5 +22,5 @@ export function getDaysUntilNextYear(
 }
 
 export function checkNYE(getDaysUntilNextYear: number): boolean {
-  return Boolean(getDaysUntilNextYear == 1);
+  return Boolean(getDaysUntilNextYear === 1);
 }
