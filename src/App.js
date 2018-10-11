@@ -24,8 +24,10 @@ class App extends React.PureComponent<*> {
   }
 
   dateHandler = (event) => {
-    let date: LocalDate = getDateOf(event.target.value)
-    this.daysUntilNextYear(date)
+    if(event.target.value != null && event.target.value != ""){
+      let date: LocalDate = getDateOf(event.target.value)
+      this.daysUntilNextYear(date)
+    }
   }
 
   daysUntilNextYear = (date) => {
