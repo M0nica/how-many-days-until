@@ -6,6 +6,10 @@ export function getToday(): LocalDate {
   return LocalDate.now();
 }
 
+export function getDateOf(date): LocalDate {
+  return LocalDate.parse(date);
+}
+
 export function getNextYear(date: LocalDate): number {
   return date.year() + 1;
 }
