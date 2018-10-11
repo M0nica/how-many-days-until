@@ -1,6 +1,7 @@
 // @flow
 
 import React from "react";
+import Today from "./components/Today";
 import "./App.css";
 
 import {
@@ -29,11 +30,11 @@ class App extends React.PureComponent<*> {
       <div className="App">
         <header className="App-header">
           <a href="https://github.com/M0nica/how-many-days-until">
-            <img style={forkMe} src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"/>
+            <img style={forkMe} src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub" />
           </a>
           <h1 className="App-title"> When will it be {nextYear}?</h1>
         </header>
-
+        <Today />
         {!isNYE ? (
           <p>
             It will be {nextYear} in {daysUntilNextYear} days!

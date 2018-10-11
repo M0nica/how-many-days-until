@@ -25,3 +25,7 @@
     transform: rotate(360deg);
   }
 }
+
+.clock {
+  font-size: 18px;
+}
