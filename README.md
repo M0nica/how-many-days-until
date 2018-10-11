@@ -2,7 +2,11 @@
 
 A React countdown app of days between today and next year. Future enhancements will allow users to countdown between today and other dates of interest.
 
-## [Cheatsheet](https://github.com/M0nica/how-many-days-until/blob/master/CHEATSHEET.md)
+Technologies
+- [React](https://github.com/facebook/react) / [Create-React-App](https://github.com/facebook/create-react-app)
+- [js-joda](https://js-joda.github.io/js-joda/cheat-sheet.html) for managing datetime, which is preferred over JavaScript's built in `Date()`
+
+## [Create-React-App Cheatsheet](https://github.com/M0nica/how-many-days-until/blob/master/CHEATSHEET.md)
 
 ## Available Scripts
 
