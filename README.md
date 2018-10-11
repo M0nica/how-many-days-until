@@ -1,5 +1,7 @@
 # how-many-days-until
 
+A React countdown app of days between today and next year. Future enhancements will allow users to countdown between today and other dates of interest.
+
 ## [Cheatsheet](https://github.com/M0nica/how-many-days-until/blob/master/CHEATSHEET.md)
 
 ## Available Scripts
