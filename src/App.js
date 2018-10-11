@@ -28,7 +28,7 @@ class App extends React.PureComponent<*> {
     return (
       <div className="App">
         <header className="App-header">
-          <a href="https://github.com/you">
+          <a href="https://github.com/M0nica/how-many-days-until">
             <img style={forkMe} src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"/>
           </a>
           <h1 className="App-title"> When will it be {nextYear}?</h1>
