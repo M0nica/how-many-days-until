@@ -8,7 +8,7 @@ import {
   getDaysUntilChristmas,
   checkChristmas
 } from "./../util/dateHelpers.js";
-import { LocalDate, Year } from "js-joda";
+import { LocalDate } from "js-joda";
 
 const today: LocalDate = getToday();
 const xmasDay: LocalDate = getChristmasDay();
@@ -116,7 +116,7 @@ class Christmas extends Component{
           <p>{message}</p>
         </div>
         <footer className="copyright">
-          <p>Icons designed by <a href="https://www.freepik.com/" target="_blank">Freepic.com</a></p>
+          <p>Icons designed by <a href="https://www.freepik.com/" target="_blank" rel="noopener noreferrer">Freepic.com</a></p>
         </footer>
       </div>
     );
