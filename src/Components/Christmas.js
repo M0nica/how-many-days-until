@@ -90,7 +90,7 @@ let message;
 let icon;
 let title;
 
-if(!isXmas) {
+if(isXmas) {
   message = "Hooray! It is Christmas today!"
   title = "Merry Christmas!"
   icon = <BaubleIcon/>
