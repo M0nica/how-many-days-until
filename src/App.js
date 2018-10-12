@@ -13,6 +13,7 @@ import {
 import { LocalDate, Year } from "js-joda";
 
 const today: LocalDate = getToday();
+const todayString: string = getToday().toString();
 const nextYear: Year = getNextYear(today);
 const firstDayNextYear: LocalDate = getFirstDayNextYear(nextYear);
 const daysUntilNextYear: number = getDaysUntilNextYear(today, firstDayNextYear);
@@ -32,6 +33,7 @@ class App extends React.PureComponent<*> {
             <img style={forkMe} src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"/>
           </a>
           <h1 className="App-title"> When will it be {nextYear}?</h1>
+          <h3>Today's date: {todayString}</h3>
         </header>
 
         {!isNYE ? (
