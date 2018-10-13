@@ -34,7 +34,7 @@ The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
 ## Screenshots
-![Home](./Screenshots/img-1.png)
+![Home](https://user-images.githubusercontent.com/6998954/46900389-666e5a80-ce6f-11e8-9b53-e6e10ccddab2.png)
 
 
 Contributing
