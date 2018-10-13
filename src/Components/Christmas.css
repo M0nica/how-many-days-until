@@ -1,0 +1,13 @@
+
+.App-header {
+  background-color: #d42426;
+}
+
+.copyright {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  font-size: 12px;
+  background: #f3f3f3;
+}

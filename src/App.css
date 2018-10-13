@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Bitter|Lobster');
+@import url("https://fonts.googleapis.com/css?family=Bitter|Lobster");
 
 .App {
   text-align: center;
@@ -18,11 +18,11 @@ main {
   background-color: hsl(355, 80%, 60%);
 }
 main h1 {
-  font-family: 'Lobster', cursive;
+  font-family: "Lobster", cursive;
   font-size: 4rem;
   line-height: 1;
   color: hsl(0, 40%, 90%);
-  text-shadow: .1rem .1rem 0 hsla(355, 50%, 25%, .8);
+  text-shadow: 0.1rem 0.1rem 0 hsla(355, 50%, 25%, 0.8);
 }
 main .message {
   display: grid;
@@ -31,10 +31,10 @@ main .message {
   position: relative;
   width: 100%;
   padding: 1rem;
-  background-color: hsla(0, 100%, 100%, .5);
+  background-color: hsla(0, 100%, 100%, 0.5);
 }
 main .message p {
-  font-family: 'Bitter', cursive;
+  font-family: "Bitter", cursive;
   font-size: 2rem;
   text-align: center;
   color: hsl(10, 70%, 15%);
