@@ -31,7 +31,7 @@ main .message {
   position: relative;
   width: 100%;
   padding: 1rem;
-  background-color: hsla(0, 100%, 100%, .5);
+  background-color: #ffffff75;
 
 }
 main .message p {
