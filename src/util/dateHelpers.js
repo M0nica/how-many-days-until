@@ -50,3 +50,18 @@ export function getDaysUntilNextYear(
 export function checkNYE(getDaysUntilNextYear: number): boolean {
   return Boolean(getDaysUntilNextYear === 1);
 }
+
+export function getChristmasDay(date: LocalDate): number {
+  return LocalDate.parse('2018-12-25');
+}
+
+export function getDaysUntilChristmas(
+  today : LocalDate,
+  christmasDay: LocalDate
+  ): number {
+  return today.until(christmasDay, ChronoUnit.DAYS);
+}
+
+export function checkChristmas(getDaysUntilChristmas: number): boolean {
+  return Boolean(getDaysUntilNextYear === 1);
+}
