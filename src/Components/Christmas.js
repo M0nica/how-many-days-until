@@ -1,6 +1,7 @@
 // @flow
 import React, { Component } from "react";
 import "./Christmas.css";
+import Navigation from "./Navigation";
 
 import {
   getToday,
@@ -104,7 +105,8 @@ class Christmas extends Component{
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        <Navigation />
+        <header className="App-header christmas">
           <a href="https://github.com/M0nica/how-many-days-until">
             <img style={forkMe} src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"/>
           </a>

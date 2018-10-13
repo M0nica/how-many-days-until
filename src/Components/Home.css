@@ -1,0 +1,18 @@
+
+.Home {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Home ul {
+  padding:0;
+  display:flex;
+  list-style-type: none;
+}
+
+.Home ul li {
+  margin-left:10px;
+}
