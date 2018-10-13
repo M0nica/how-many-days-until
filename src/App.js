@@ -17,12 +17,7 @@ const nextYear: Year = getNextYear(today);
 const firstDayNextYear: LocalDate = getFirstDayNextYear(nextYear);
 const daysUntilNextYear: number = getDaysUntilNextYear(today, firstDayNextYear);
 const isNYE = checkNYE(daysUntilNextYear);
-const forkMe = {
-  position: "absolute",
-  top: 0,
-  right: 0,
-  border: 0
-};
+
 class App extends React.PureComponent<*> {
   render(): ?React$Element<*> {
     return (
@@ -58,13 +53,13 @@ class App extends React.PureComponent<*> {
         </header>
         <main>
           <h1>When will it be {nextYear}?</h1>
-          <section class="message">
+          <section className="message">
             {!isNYE ? (
               <p>
                 It will be {nextYear} in {daysUntilNextYear} days!
               </p>
             ) : (
-              <p>It's New Years Eve and {nextYear} starts tomorrow!</p>
+              <p>It&apos;s New Years Eve and {nextYear} starts tomorrow!</p>
             )}
           </section>
         </main>
