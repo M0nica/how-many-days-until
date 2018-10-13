@@ -1,27 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Bitter|Lobster');
+
 .App {
   text-align: center;
 }
 
-.App-header {
-  background-color: #333479;
-  height: 100%;
-  padding: 20px;
-  color: white;
+main {
+  position: fixed;
+  display: grid;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  z-index: -1;
+  background-color: hsl(355, 80%, 60%);
 }
-
-.App-title {
-  font-size: 1.5em;
+main h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 4rem;
+  line-height: 1;
+  color: hsl(0, 40%, 90%);
+  text-shadow: .1rem .1rem 0 hsla(355, 50%, 25%, .8);
 }
-
-.App-intro {
-  font-size: large;
+main .message {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding: 1rem;
+  background-color: hsla(0, 100%, 100%, .5);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+main .message p {
+  font-family: 'Bitter', cursive;
+  font-size: 2rem;
+  text-align: center;
+  color: hsl(10, 70%, 15%);
 }
