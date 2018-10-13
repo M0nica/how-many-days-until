@@ -32,6 +32,7 @@ main .message {
   width: 100%;
   padding: 1rem;
   background-color: hsla(0, 100%, 100%, .5);
+
 }
 main .message p {
   font-family: 'Bitter', cursive;
