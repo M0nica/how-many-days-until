@@ -1,13 +1,13 @@
 // @flow
-import React, { Component } from "react";
-import "./Christmas.css";
+import React, { Component, Fragment } from "react";
+import "./styles.css";
 
 import {
   getToday,
   getChristmasDay,
   getDaysUntilChristmas,
   checkChristmas
-} from "./../util/dateHelpers.js";
+} from "../../util/dateHelpers.js";
 import { LocalDate } from "js-joda";
 
 const today: LocalDate = getToday();
@@ -24,7 +24,7 @@ const forkMe = {
 class BaubleIcon extends Component {
   render() {
     return (
-      <svg 
+      <svg
         xmlns="http://www.w3.org/2000/svg"
         width="100px"
         height="100px"
@@ -56,8 +56,8 @@ class BaubleIcon extends Component {
 class DrumIcon extends Component {
   render() {
     return (
-      <svg 
-        xmlns="http://www.w3.org/2000/svg" 
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
         width="100px"
         height="100px"
         viewBox="0 0 512.026 512.026">
@@ -100,16 +100,11 @@ if(isXmas) {
   icon = <DrumIcon/>
 }
 
-class Christmas extends Component{
+class Christmas extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <a href="https://github.com/M0nica/how-many-days-until">
-            <img style={forkMe} src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"/>
-          </a>
-          <h1 className="App-title">When will it be Christmas?</h1>
-        </header>
+      <Fragment>
+        <h1 className="App-title">When will it be Christmas?</h1>
         <div className="App-content">
           <h2>{title}</h2>
           {icon}
@@ -118,7 +113,7 @@ class Christmas extends Component{
         <footer className="copyright">
           <p>Icons designed by <a href="https://www.freepik.com/" target="_blank" rel="noopener noreferrer">Freepic.com</a></p>
         </footer>
-      </div>
+      </Fragment>
     );
   }
 }
