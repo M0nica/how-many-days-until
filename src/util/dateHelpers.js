@@ -1,28 +1,29 @@
 // @flow
 
-import { LocalDate, ChronoUnit } from "js-joda";
-
-const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+import { LocalDate, ChronoUnit, Month } from "js-joda";
 
 export function getToday(): LocalDate {
   return LocalDate.now();
 }
 
-export function getDayOfWeek(): LocalDate {
-  return days[new Date().getDay()];
+export function getDayOfWeek(): DayOfWeek {
+  return capitalizeFirstLetter(getToday().dayOfWeek().toString().toLowerCase());
 }
 
-export function getMonth(): LocalDate {
-  return months[new Date().getMonth()];
+export function getMonth(): Month {
+  return capitalizeFirstLetter(getToday().month().toString().toLowerCase());
 }
 
 export function getDayOfMonth(): LocalDate {
-  const dayNum = new Date().getDate();
+  const dayNum = getToday().dayOfMonth().toString();
   return dayNum + nth(dayNum);
 }
 
-function nth(d: number): number {
+export function getFormattedDate(): string {
+  return `${getDayOfWeek()}, ${getMonth()} ${getDayOfMonth()}`;
+}
+
+function nth(d: number): string {
   if (d > 3 && d < 21) return "th";
   switch (d % 10) {
   case 1: return "st";
@@ -30,6 +31,10 @@ function nth(d: number): number {
   case 3: return "rd";
   default: return "th";
   }
+}
+
+function capitalizeFirstLetter(string: string): string {
+  return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 export function getNextYear(date: LocalDate): number {
