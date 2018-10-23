@@ -2,13 +2,20 @@ module.exports = {
   env: {
     browser: true,
     es6: true,
-    jest: true
+    jest: true,
+    node: true
   },
-  extends: "eslint:recommended",
-
+  extends: [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
   plugins: ["react", "flowtype", "eslint-plugin-flowtype"],
-
   parser: "babel-eslint",
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true
+    }
+  },
   rules: {
     indent: ["error", 2],
     "linebreak-style": ["error", "unix"],

@@ -28,6 +28,13 @@ You will also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.<br>
 
+### `npm run lint`
+
+Run ESLint on the project and view lint errors and warnings.
+
+### `npm run lint-fix`
+
+Run ESLint on the project and apply automatic fixes.
 
 ### `npm run build`
 
