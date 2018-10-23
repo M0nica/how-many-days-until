@@ -16,6 +16,12 @@ module.exports = {
       jsx: true
     }
   },
+  "settings": {
+    "react": {
+      "pragma":"React",
+      "version": "16.4.2"
+    }
+  },
   rules: {
     indent: ["error", 2],
     "linebreak-style": ["error", "unix"],
