@@ -9,6 +9,13 @@ module.exports = {
     "eslint:recommended",
     "plugin:react/recommended"
   ],
+  settings: {
+    react: {
+      pragma: "React",  // Pragma to use, default to "React"
+      version: "15.0", // React version, default to the latest React stable release
+      flowVersion: "0.53" // Flow version
+    }
+  },
   plugins: ["react", "flowtype", "eslint-plugin-flowtype"],
   parser: "babel-eslint",
   parserOptions: {
