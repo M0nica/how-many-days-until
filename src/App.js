@@ -1,7 +1,7 @@
 // @flow
 
 import React, { type Node } from "react";
-import Today from "./components/Today";
+import Today from "./Components/Today";
 import "./App.css";
 import ViewOnGithub from "./Components/ViewOnGithub";
 import NewYears from "./Components/NewYears";
