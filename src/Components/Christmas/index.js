@@ -14,15 +14,9 @@ const today: LocalDate = getToday();
 const xmasDay: LocalDate = getChristmasDay();
 const daysUntilXmas: number = getDaysUntilChristmas(today, xmasDay);
 const isXmas = checkChristmas(daysUntilXmas);
-const forkMe = {
-  position: "absolute",
-  top: 0,
-  right: 0,
-  border: 0
-};
 
-class BaubleIcon extends Component {
-  render() {
+class BaubleIcon extends Component<*, *> {
+  render(): React$Element<*> {
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -49,12 +43,12 @@ class BaubleIcon extends Component {
         </g>
         <path d="M305.501 356.499c5.7 6 15.298 6 20.999 0l49.501-49.2 66.301 66.301c3.6-11.4 5.999-23.101 7.5-35.099L386.501 275.5c-5.7-5.999-15.298-5.999-20.999 0L316 324.699l-49.501-49.2A14.434 14.434 0 0 0 256 271v36.299l49.501 49.2z" fill="#e50027" />
       </svg>
-    )
+    );
   }
 }
 
-class DrumIcon extends Component {
-  render() {
+class DrumIcon extends Component<*, *> {
+  render(): React$Element<*> {
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +75,7 @@ class DrumIcon extends Component {
         <circle cx="256.013" cy="315.026" r="15" fill="#fea832" />
         <path d="M271.013 315.026c0-8.286-6.716-15-15-15v30c8.284 0 15-6.716 15-15z" fill="#fe9923" />
       </svg>
-    )
+    );
   }
 }
 
@@ -91,17 +85,17 @@ let icon;
 let title;
 
 if (isXmas) {
-  message = "Hooray! It is Christmas today!"
-  title = "Merry Christmas!"
-  icon = <BaubleIcon />
+  message = "Hooray! It is Christmas today!";
+  title = "Merry Christmas!";
+  icon = <BaubleIcon />;
 } else {
   message = "It is only " + daysUntilXmas + " more days until Christmas";
-  title = "Stay Strong!"
-  icon = <DrumIcon />
+  title = "Stay Strong!";
+  icon = <DrumIcon />;
 }
 
-class Christmas extends Component {
-  render() {
+class Christmas extends Component<*, *> {
+  render(): React$Element<*> {
     return (
       <Fragment>
         <h1>When will it be Christmas?</h1>
