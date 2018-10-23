@@ -1,9 +1,40 @@
 // @flow
 
-import { LocalDate, ChronoUnit } from "js-joda";
+import { LocalDate, ChronoUnit, Month } from "js-joda";
 
 export function getToday(): LocalDate {
   return LocalDate.now();
+}
+
+export function getDayOfWeek(): DayOfWeek {
+  return capitalizeFirstLetter(getToday().dayOfWeek().toString().toLowerCase());
+}
+
+export function getMonth(): Month {
+  return capitalizeFirstLetter(getToday().month().toString().toLowerCase());
+}
+
+export function getDayOfMonth(): LocalDate {
+  const dayNum = getToday().dayOfMonth().toString();
+  return dayNum + nth(dayNum);
+}
+
+export function getFormattedDate(): string {
+  return `${getDayOfWeek()}, ${getMonth()} ${getDayOfMonth()}`;
+}
+
+function nth(d: number): string {
+  if (d > 3 && d < 21) return "th";
+  switch (d % 10) {
+  case 1: return "st";
+  case 2: return "nd";
+  case 3: return "rd";
+  default: return "th";
+  }
+}
+
+function capitalizeFirstLetter(string: string): string {
+  return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 export function getNextYear(date: LocalDate): number {

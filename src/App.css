@@ -75,3 +75,7 @@ main .message p {
   text-align: center;
   color: hsl(10, 70%, 15%);
 }
+
+.clock {
+  font-size: 18px;
+}
