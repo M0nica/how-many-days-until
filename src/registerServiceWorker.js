@@ -1,3 +1,4 @@
+// @flow
 // In production, we register a service worker to serve assets from local cache.
 
 // This lets the app load faster on subsequent visits in production, and gives
@@ -52,10 +53,10 @@ export default function register() {
   }
 }
 
-function registerValidSW(swUrl) {
+function registerValidSW(swUrl: string) {
   navigator.serviceWorker
     .register(swUrl)
-    .then(registration => {
+    .then((registration: {onupdatefound: () => void}) => {
       registration.onupdatefound = () => {
         const installingWorker = registration.installing;
         installingWorker.onstatechange = () => {
@@ -76,22 +77,22 @@ function registerValidSW(swUrl) {
         };
       };
     })
-    .catch(error => {
+    .catch((error: Error) => {
       console.error('Error during service worker registration:', error);
     });
 }
 
-function checkValidServiceWorker(swUrl) {
+function checkValidServiceWorker(swUrl: string) {
   // Check if the service worker can be found. If it can't reload the page.
   fetch(swUrl)
-    .then(response => {
+    .then((response: {status: number}) => {
       // Ensure service worker exists, and that we really are getting a JS file.
       if (
         response.status === 404 ||
         response.headers.get('content-type').indexOf('javascript') === -1
       ) {
         // No service worker found. Probably a different app. Reload the page.
-        navigator.serviceWorker.ready.then(registration => {
+        navigator.serviceWorker.ready.then((registration: {unregister: () => Promise}) => {
           registration.unregister().then(() => {
             window.location.reload();
           });
@@ -110,7 +111,7 @@ function checkValidServiceWorker(swUrl) {
 
 export function unregister() {
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.ready.then(registration => {
+    navigator.serviceWorker.ready.then((registration: {unregister: () => void} ) => {
       registration.unregister();
     });
   }
