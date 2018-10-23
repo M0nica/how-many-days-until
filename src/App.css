@@ -1,9 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Bitter|Lobster');
 
-.App {
-  text-align: center;
+html {
+  box-sizing: border-box;
+  font-family: 'Bree Serif', serif;
+  text-shadow: 0 2px 0 hsl(0, 35%, 5%), .1;
 }
-
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+.App {
+  font-family: 'Bitter', cursive;
+  text-align: center;
+  color: hsl(10, 70%, 15%);
+}
 main {
   position: fixed;
   display: grid;
@@ -18,11 +31,33 @@ main {
   background-color: hsl(355, 80%, 60%);
 }
 main h1 {
+  margin: 2rem;
   font-family: 'Lobster', cursive;
   font-size: 4rem;
   line-height: 1;
   color: hsl(0, 40%, 90%);
   text-shadow: .1rem .1rem 0 hsla(355, 50%, 25%, .8);
+}
+main .icon {
+  display: grid;
+  position: relative;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+}
+main .icon h2 {
+  position: absolute;
+  margin-top: 1.5rem;
+  padding: .5rem;
+  border-radius: .2rem;
+  font-size: 1.2rem;
+  color: hsl(0, 40%, 90%);
+  background-color: hsl(10, 70%, 15%);
+  opacity: .8;
+}
+main h3 {
+  margin-bottom: .5rem;
 }
 main .message {
   display: grid;
@@ -30,9 +65,9 @@ main .message {
   align-items: center;
   position: relative;
   width: 100%;
+  margin: 2rem;
   padding: 1rem;
   background-color: hsla(0, 100%, 100%, .5);
-
 }
 main .message p {
   font-family: 'Bitter', cursive;
