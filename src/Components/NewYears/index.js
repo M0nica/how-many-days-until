@@ -28,7 +28,7 @@ export default class NewYears extends Component<{}> {
               It will be {nextYear} in {daysUntilNextYear} days!
             </p>
           ) : (
-            <p>It's New Years Eve and {nextYear} starts tomorrow!</p>
+            <p>It&apos;s New Years Eve and {nextYear} starts tomorrow!</p>
           )}
         </section>
       </Fragment>

@@ -1,8 +1,10 @@
+//@flow
+
 import React, { Component } from "react";
 import Clock from "./Clock";
 import { getFormattedDate } from "../util/dateHelpers.js";
 
-export default class Today extends Component {
+export default class Today extends Component<{}> {
   render(): ?React$Element<*> {
     return (
       <div>
