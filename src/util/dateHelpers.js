@@ -57,13 +57,13 @@ export function checkNYE(getDaysUntilNextYear: number): boolean {
 }
 
 export function getChristmasDay(date: LocalDate): number {
-  return LocalDate.parse('2018-12-25');
+  return LocalDate.parse("2018-12-25");
 }
 
 export function getDaysUntilChristmas(
-  today : LocalDate,
+  today: LocalDate,
   christmasDay: LocalDate
-  ): number {
+): number {
   return today.until(christmasDay, ChronoUnit.DAYS);
 }
 
